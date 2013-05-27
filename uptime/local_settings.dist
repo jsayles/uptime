@@ -1,0 +1,34 @@
+PRODUCTION = False
+DEBUG = True
+TEMPLATE_DEBUG = DEBUG
+
+# Admins
+ADMINS = (
+    ('YOU', 'you@yourdomain.com'),
+)
+MANAGERS = ADMINS
+
+DATABASES = {
+    'default': {
+		'ENGINE':'django.db.backends.postgresql_psycopg2',
+		'USER':'postgres',
+		'NAME':'uptimedb',
+		'PASSWORD':'1234'
+    }
+}
+
+ALLOWED_HOSTS = []
+
+TIME_ZONE = 'America/Chicago'
+
+# Make this unique, and don't share it with anybody.
+SECRET_KEY = 'ZZZ'
+
+DEFAULT_FROM_EMAIL = "something@example.com"
+EMAIL_ADDRESS = "something@example.com"
+EMAIL_HOST = "smtp.example.com"
+EMAIL_HOST_PASSWORD = "password"
+EMAIL_HOST_USER = "username"
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_SUBJECT_PREFIX = "[UPTIME] " # or None if you want no subject prefix
